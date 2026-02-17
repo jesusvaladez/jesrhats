@@ -1,5 +1,7 @@
-html {
+html, body {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -140,7 +142,9 @@ a { /* Ensures that the A href text does not turn blue and stays the original co
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border: 3px solid purple;
-    width: 80vw;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
     justify-items: center;
     margin-bottom: 100px;
 }
@@ -157,9 +161,9 @@ a { /* Ensures that the A href text does not turn blue and stays the original co
 .product-card {
     border: 3px solid #caa5b1;
     border-radius: 10px;
-    width: 20vw;
+    width: 100%;
     text-align: center;
-    margin: 10px;
+    margin: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -272,7 +276,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
     .products-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     .product-card {
         width: 40vw;
