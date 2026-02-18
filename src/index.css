@@ -279,6 +279,16 @@ footer {
 @media only screen and (max-width: 768px) {
     .navbar-bp {
         display: none;
+        position: fixed;
+        top: 7vh;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: blue;
+        flex-direction: column;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
     }
     .hamburger {
         display: block;
@@ -288,9 +298,14 @@ footer {
         color: red;
         cursor: pointer;
         position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
     }
     .navbar-bp.active {
         display: flex;
+        right: 0;
     }
     .products-container {
         grid-template-columns: 1fr;
