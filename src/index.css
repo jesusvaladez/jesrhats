@@ -25,7 +25,9 @@ main {
     flex-direction: column;
 }
 
-
+.hamburger {
+    display: none;
+}
 header {
     position: fixed;
     top: 0;
@@ -275,6 +277,21 @@ footer {
 
 
 @media only screen and (max-width: 768px) {
+    .navbar-bp {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 3rem;
+        color: red;
+        cursor: pointer;
+        position: absolute;
+    }
+    .navbar-bp.active {
+        display: flex;
+    }
     .products-container {
         grid-template-columns: 1fr;
     }
