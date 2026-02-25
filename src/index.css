@@ -277,25 +277,37 @@ footer {
 
 
 @media only screen and (max-width: 768px) {
-    .navbar-bp {
+    .left-container {
         display: none;
-        position: fixed;
-        top: 7vh;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: blue;
+    }
+    .left-container,
+    .right-container {
         flex-direction: column;
-        padding: 40px 20px;
-        transition: right 0.3s ease;
-        z-index: 999;
+        width: 100%;
+        align-items: flex-start;
+        gap: 20px;
+        flex: 0; /* Remove the flex: 1 that's making them stretch */
+    }
+    .navbar-bp {
+        color: black;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        transition: top 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .hamburger {
         display: block;
         background: none;
         border: none;
         font-size: 3rem;
-        color: red;
+        color: white;
         cursor: pointer;
         position: absolute;
         right: 20px;
@@ -305,7 +317,7 @@ footer {
     }
     .navbar-bp.active {
         display: flex;
-        right: 0;
+        top: 7vh;
     }
     .products-container {
         grid-template-columns: 1fr;
