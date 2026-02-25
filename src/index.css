@@ -42,6 +42,7 @@ header {
     height: 7vh;
     display: flex;
     font-size: 18px;
+    border-bottom: 3px solid #b8919d;
 }
 a { /* Ensures that the A href text does not turn blue and stays the original color I assigned it to */
     color: inherit;
@@ -329,12 +330,32 @@ footer {
     .left-container {
         display: none;
     }
+    .right-container a {
+        width: 100%;
+        padding: 18px 20px;
+        text-align: center;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: 0.2s ease;
+    }
+    .right-container a:last-child {
+        border-bottom: none;
+    }
+    .right-container a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding-left: 30px;
+    }
+    .right-bp::before {
+        display: none;
+    }
     .left-container,
     .right-container {
         flex-direction: column;
         width: 100%;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: center;
+        gap: 0;
         flex: 0; /* Remove the flex: 1 that's making them stretch */
     }
     .navbar-bp {
@@ -345,11 +366,12 @@ footer {
         width: 100%;
         height: auto;
         max-height: 50vh;
-        background-color: white;
+        background: linear-gradient(135deg, #caa5b1 0%, #b8919d 100%);
         flex-direction: column;
         padding: 20px;
         transition: top 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        z-index: 999;
     }
     .hamburger {
         display: block;
@@ -363,6 +385,9 @@ footer {
         top: 50%;
         transform: translateY(-50%);
         z-index: 1001;
+    }
+    .hamburger:hover {
+        color: #ffffff;
     }
     .navbar-bp.active {
         display: flex;
